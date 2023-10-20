@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head.ejs') %>
+
+<body>
+  <h1 style="margin-top: 70px;">Listagem de Clientes</h1>
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>IDADE</th>
+        <th>EMAIL</th>
+        <th>CPF</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% for (client of clients){ %>
+        <tr>
+          <td><%= client.id %></td>
+          <td><%= client.name %></td>
+          <td><%= client.birthday %></td>
+          <td><%= client.email %></td>
+          <td><%= client.cpf %></td>
+        </tr>
+      <% } %>   
+    </tbody>
+
+  </table>
+  <a href="/" class="btn btn-primary">Voltar</a>
+</body>
+</html>
